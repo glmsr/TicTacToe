@@ -1,0 +1,505 @@
+:root{
+    --bentoBlue: rgb(84,90,167);
+    --bentoPink: rgb(163, 76, 92);
+    
+}
+
+html {
+    margin: 0%;
+    background-color:  rgb(46, 57, 76);
+    position:relative;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    user-select: none;
+}
+
+head{
+    display: flex;
+    width : auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+   
+}
+
+/* title{
+    display: none;
+    position: absolute;
+    width: 99%;
+    font-size: 44px;
+    align-self: flex-start;
+    justify-content: center;
+    top: 0;
+    z-index : 99;
+    user-select: none;  
+} */
+
+#titleId{
+    display: none;
+    position: absolute;
+    width: auto;
+    font-size: 44px;
+    align-self: flex-start;
+    justify-content: center;
+    top: 0;
+    /* z-index : 99; */
+    /* user-select: none;   */
+    transition: color 100ms linear;
+}
+#titleId:hover{
+    cursor: pointer;
+    color: var(--bentoPink);
+    transition: color 100ms linear;
+
+}
+
+body{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    margin: 0%;
+    height: 99vh;
+    width: 99.8%;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    min-height: 800px;
+}
+
+#startMenu{
+    display: flex;
+    position: absolute;
+    height: 100%;
+    width: 99.8%;
+    border : 1px solid black;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#pvpBtnTitle{
+    display: flex;
+    position: absolute;
+    color: white;
+    font-size: 40px;
+}
+
+
+
+
+input[id='pvpBtn']{
+    display: none;
+}
+
+input[id='pvpBtn']+label{
+    display: flex;
+    /* user-select: none; */
+    flex: 1;
+    position: relative;
+    height: 100%;
+    /* border: 1px solid black; */
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+    /* left : 10;
+    top : 50; */
+    top: 0;
+    background: var(--bentoBlue);
+    text-align: center;
+    /* width: 150px; */
+    /* border-radius: 20px; */
+    /* opacity: 0.5; */
+    transition: flex 0.5s;
+    transition-timing-function: linear;
+    z-index: 1;
+}
+
+input[name='radioBtn']:checked+label{
+    /* background-color: white; */
+    /* background: rgb(84,90,167); */
+    flex: 5;
+    /* justify-content: center;     */
+}
+input[id='pvpBtn']:checked+label{
+    
+    /* background: rgb(84,90,167); */
+    background: linear-gradient(90deg, var(--bentoBlue) 0%, var(--bentoBlue) 80%, var(--bentoPink) 100%);
+    flex: 5;
+    /* justify-content: center;     */
+}
+input[id='pvpBtn']+label:hover > #pvpBtnTitle{
+    color: var(--bentoPink);
+    transition: color 100ms linear;
+    cursor: pointer;
+    
+    
+}
+
+#nameTitle{
+    margin-top: -1px;
+    height: 50px;
+    font-size: 24px;
+    top: 0;
+    color: white;
+}
+#pvpName1, #pvAiName1{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 50;
+    align-content: center;
+    left: 50;
+    border: 1px solid black;
+    height: 50px;
+    width: 100px;
+    text-align: center;
+    border-radius: 10px;
+    outline: none;
+    transition: 100ms;
+    
+}
+#pvpName1:focus, #pvAiName1:focus{
+    border: 3px solid var(--bentoBlue);
+
+}
+#pvpName2, #pvAiName2{
+    display: flex;
+    position: absolute;
+    top: 50;
+    align-content: center;
+    right: 50;
+    border: 1px solid black;
+    height: 50px;
+    width: 100px;
+    text-align: center;
+    border-radius: 10px;
+    outline: none;
+    transition: 100ms;
+}
+#pvpName2:focus{
+    border: 3px solid var(--bentoPink);
+}
+#markTitle{
+    display: flex;
+    position: absolute;
+    height: 50px;
+    margin-top : 150px;
+    font-size: 24px;
+    color: white;
+}
+
+#pvpBtnMenu, #pvAiBtnMenu{
+    position: relative;
+    
+    border: 1px solid black;
+    display: none;
+    height:400px;
+    max-width: 400px;
+    flex: 0.5;
+    justify-content: center;
+    top: 50;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.31);
+    box-shadow: 0px 0px 5px 5px rgba(59, 59, 59, 0.75);
+    transition: display 0.6s;
+}
+
+
+
+#pvpBtnBg{
+    display: none;
+    position: absolute;
+    height: 500px;
+    width: 1px;
+    z-index: -2;
+    /* align-content: flex-end; */
+    
+    /* border: 1px solid black; */
+    left: 0;
+    top: 50;
+    font-size: 122px;
+    opacity: 10%;
+    text-align: start;
+    margin-top: -150px;
+}
+#pvpBtnBgText {
+    display: flex;
+    position: absolute;
+    /* user-select: none; */
+    line-height: 180px;
+    margin-bottom: 100px;
+    overflow: auto;
+}
+
+
+#markChanger{
+    display: flex;
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    bottom: 100;
+    border: 0;
+    background:transparent;
+    position: absolute;
+}
+#markChangerImg{
+    /* user-select: none; */
+    height: 80px;
+    width: 80px;
+    transition: 100ms;
+    border-radius: 100%;
+}
+#markChangerImg:hover{
+    border: 1px solid var(--bentoBlue);
+    /* border-radius: 100%; */
+    box-shadow: inset 0px 0px 40px 40px var(--bentoPink);
+}
+#markChangerImg:active{
+    top: 5px;
+}
+#pvpMark1, #pvAiMark1{
+    display:flex;
+    position:absolute;
+    left: 75;
+    bottom: 50;
+    font-size: 54px;
+    font-family: 'Permanent Marker', cursive;
+    color: white;
+    
+}
+
+#pvpMark2, #pvAiMark2{
+    display:flex;
+    position:absolute;
+    right: 75;
+    bottom: 50;
+    font-size: 54px;
+    font-family: 'Permanent Marker', cursive;
+    color: white;
+}
+#startButton{
+    /* display: none; */
+    position: absolute;
+    align-items: center;
+    justify-content: center;    
+    /* align-self: end; */
+    border: 1px solid rgb(255, 255, 255);
+    height: 50px;
+    width: 150px;
+    color: rgb(253, 121, 145);
+    background-color: rgb(46, 57, 76);
+    border-radius: 20px;
+    bottom: 0;
+    transition: 150ms;
+    /* left: 30%; */
+    /* z-index: 99;     */
+}
+#startButton:hover{
+    background-color: rgb(253, 121, 145);
+    color: rgb(46, 57, 76);
+}
+/* vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv */
+input[id='pvAiBtn']{
+    display: none;
+}
+input[id='pvAiBtn']+label{
+    display: flex;
+    /* user-select: none; */
+    flex: 1;
+    position: relative;
+    height: 100%;
+    /* border: 1px solid black; */
+    align-items: center;
+    justify-content: center;    
+    margin: 0px;
+    top: 0;
+    /* right: 0; */
+    background-color: var(--bentoPink);
+    text-align : center;
+    /* opacity: 0.50; */
+    transition: flex 0.5s;
+    z-index: 1;
+}
+input[id='pvAiBtn']:checked+label{
+    background: rgb(84,90,167);
+    background: linear-gradient(90deg, var(--bentoBlue) 0%, var(--bentoBlue) 0%, var(--bentoPink) 12%);
+    /* background-color: white; */
+}
+input[id='pvAiBtn']+label:hover > #pvAiBtnTitle{
+    color: var(--bentoBlue);
+    transition: color 100ms linear;
+    cursor: pointer;
+    
+    
+    
+}
+#pvAiBtnBg{
+    display: none;
+    position: absolute;
+    height: 500px;
+    width: 500px;
+    z-index: -2;
+    /* align-content: flex-end; */
+    /* overflow: hidden; */
+    /* border: 1px solid black; */
+    top:50;
+    right: 0;
+    font-size: 122px;
+    opacity: 10%;
+    text-align: end;
+    margin-top: -150px;
+
+}
+#pvAiBtnBgText {
+    display: flex;
+    position: absolute;
+    /* user-select: none; */
+    line-height: 180px;
+}
+
+
+#pvAiBtnTitle{
+    color: white;
+    font-size: 40px;
+}
+
+
+#gameBoard {
+    display: grid;
+    height: 400px;
+    width: 400px;
+    grid-template-areas:
+    '0 1 2'
+    '3 4 5'
+    '6 7 8';
+    font-family: 'Permanent Marker', cursive;
+    background-color: rgba(255, 255, 255, 0.603);
+}
+.gameBoard-win{
+    color: transparent;
+    text-shadow: 0 0 18px #000;
+    transition: text-shadow 0.5s;
+}
+
+/* #boardGrid:hover{
+    background-color: yellow;
+    
+} */
+
+.tiles{
+    display: flex;
+    position: static;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid black;
+    font-size : 84px;
+    overflow: hidden;
+    max-width: 132px;
+    max-height: 132px;
+    min-width: 132px;
+    min-height:132px;
+    transition: 70ms;
+    /* color: transparent;
+    /* vertical-align: baseline; */
+}
+
+.tiles:hover{
+    background-color: yellow;
+    
+}
+
+.tiles-win{
+    -webkit-box-shadow: inset 0px 0px 15px 5px rgba(0,0,0,0.22); 
+    box-shadow: inset 0px 0px 15px 5px rgba(0,0,0,0.22);
+    transition: box-shadow 0.5s;
+    
+}
+.winScreen{
+    display: flex;
+    position: absolute; 
+    height: 401px;
+    width: 401px;
+    opacity: 0.61;
+    background-color: rgba(0, 0, 0, 0.31);
+    filter: blur(5px);
+}
+
+.winnerTilesBg{
+    background-color: yellow;
+    transition: background-color 150ms;
+}
+
+/* #p1Name, #p2Name{
+    display: flex;
+    height: 300px;
+    width: 300px;
+    border: 1px solid black;
+    z-index : -999;
+} */
+
+.playAgain{
+    display: flex;
+    position: absolute;
+    font-size: 44px;
+    height: 400px;
+    width: 400px;
+
+    border: 1px solid black;
+    justify-content: center;
+    justify-self: center;
+    align-content: center;
+    
+    /* border: 1px solid black; */
+    /* user-select: none; */
+
+}
+/* .playAgain{
+    display: flex;
+    position: absolute;
+    font-size: 44px;
+    
+    justify-content: center;
+    justify-self: center;
+    align-content: center;
+
+    right: 0;
+    bottom: 150;
+    width: 100%;
+} */
+.playAgainButton{
+    display: flex;
+    align-self: center;
+    transition: color 100ms linear; 
+    
+}
+
+.playAgain:hover{
+    cursor: pointer;
+    color: white;
+    transition: color 100ms linear;
+}
+
+#scoreBoard{
+    display: flex;
+    height: 100px;
+    width: 220px;
+    border: 5px solid white;
+    background: transparent;
+    color: rgb(253, 121, 145);
+    margin: auto;
+    position: absolute;
+    top: 80;
+    right : 0;
+    left: 0;
+    /* bottom: 0; */
+    /* right: 2; */
+    border-radius : 30px;
+    align-items: center;
+    justify-content: center;
+    /* user-select: none; */
+}
+
+footer{
+    clear: both;
+    position: relative;
+    height: 200px;
+    margin-top: -200px;
+}
